@@ -1,50 +1,23 @@
-// Smooth Scroll
-function scrollToInvite() {
-    document.querySelector(".invitation").scrollIntoView({
-        behavior: "smooth"
-    });
-}
-
-// Fade In On Scroll
-const faders = document.querySelectorAll('.fade-in');
-
-const appearOptions = {
-    threshold: 0.3
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries, observer){
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-    });
-}, appearOptions);
-
-faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-});
-
-// Auto Music Play with Fallback
-window.addEventListener("load", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const music = document.getElementById("bg-music");
 
-    const playPromise = music.play();
-
-    if (playPromise !== undefined) {
-        playPromise.catch(() => {
-            document.addEventListener("click", function () {
-                music.play();
-            }, { once: true });
+    // Force autoplay attempt
+    const playAudio = () => {
+        music.play().then(() => {
+            console.log("Music started automatically");
+        }).catch(() => {
+            // If blocked, try muted autoplay (browser safe method)
+            music.muted = true;
+            music.play().then(() => {
+                // Unmute after slight delay
+                setTimeout(() => {
+                    music.muted = false;
+                }, 1000);
+            }).catch(() => {
+                console.log("Autoplay completely blocked by browser");
+            });
         });
-    }
-});
+    };
 
-// Toggle Button
-function toggleMusic() {
-    const music = document.getElementById("bg-music");
-    if (music.paused) {
-        music.play();
-    } else {
-        music.pause();
-    }
-}
+    playAudio();
+});
