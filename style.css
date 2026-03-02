@@ -1,83 +1,41 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* 📍 LOCATION QR SECTION */
+
+.location-section {
+    margin-top: 40px;
+    text-align: center;
 }
 
-body{
-    font-family:'Playfair Display', serif;
-    background:#f8f4ec;
-    text-align:center;
-    overflow-x:hidden;
+.location-section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #5a0f1c;
 }
 
-/* 🔥 INTRO SCREEN */
-#intro-screen{
-    position:fixed;
-    width:100%;
-    height:100vh;
-    background:linear-gradient(rgba(90,15,28,0.7),rgba(90,15,28,0.7)),
-    url('https://images.unsplash.com/photo-1519741497674-611481863552') center/cover;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index:9999;
-    transition:opacity 1.5s ease, visibility 1.5s;
+.location-section p {
+    margin-bottom: 15px;
+    font-size: 16px;
 }
 
-.intro-content h1{
-    font-family:'Great Vibes', cursive;
-    font-size:60px;
-    margin:20px 0;
+.qr-box {
+    display: inline-block;
+    padding: 15px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
 }
 
-.cross{
-    font-size:30px;
+.qr-box img {
+    width: 180px;
+    height: 180px;
 }
 
-#enter-btn{
-    margin-top:20px;
-    padding:12px 30px;
-    border:none;
-    background:white;
-    color:#5a0f1c;
-    border-radius:30px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:0.3s;
+.qr-box:hover {
+    transform: scale(1.05);
 }
 
-#enter-btn:hover{
-    background:#5a0f1c;
-    color:white;
-}
-
-/* 🌸 MAIN CONTENT */
-#main-content{
-    opacity:0;
-    transition:opacity 2s ease;
-}
-
-.hero{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-}
-
-.hero h1{
-    font-family:'Great Vibes', cursive;
-    font-size:60px;
-}
-
-.card{
-    background:white;
-    padding:40px;
-    margin:50px auto;
-    width:80%;
-    max-width:600px;
-    border-radius:15px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+.scan-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
 }
