@@ -32,16 +32,18 @@ body{
     margin:20px 0;
 }
 
-/* ✝ PNG CROSS STYLE */
-
-.cross {
-    margin-bottom: 15px;
+.cross img {
+    width: 70px;
+    animation: glowCross 3s ease-in-out infinite alternate;
 }
 
-.cross img {
-    width: 60px;       /* Adjust size if needed */
-    height: auto;
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+@keyframes glowCross {
+    from {
+        filter: drop-shadow(0 0 5px gold);
+    }
+    to {
+        filter: drop-shadow(0 0 20px gold);
+    }
 }
 
 #enter-btn{
