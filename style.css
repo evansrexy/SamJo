@@ -1,5 +1,88 @@
-/* 📍 LOCATION QR SECTION */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
+body{
+    font-family:'Playfair Display', serif;
+    background:#f8f4ec;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+/* 🔥 INTRO SCREEN */
+#intro-screen{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    background:linear-gradient(rgba(90,15,28,0.7),rgba(90,15,28,0.7)),
+    url('https://images.unsplash.com/photo-1519741497674-611481863552') center/cover;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    transition:opacity 1.5s ease, visibility 1.5s;
+}
+
+.intro-content h1{
+    font-family:'Great Vibes', cursive;
+    font-size:60px;
+    margin:20px 0;
+}
+
+.cross{
+    font-size:30px;
+}
+
+#enter-btn{
+    margin-top:20px;
+    padding:12px 30px;
+    border:none;
+    background:white;
+    color:#5a0f1c;
+    border-radius:30px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#enter-btn:hover{
+    background:#5a0f1c;
+    color:white;
+}
+
+/* 🌸 MAIN CONTENT */
+#main-content{
+    opacity:0;
+    transition:opacity 2s ease;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero h1{
+    font-family:'Great Vibes', cursive;
+    font-size:60px;
+}
+
+.card{
+    background:white;
+    padding:40px;
+    margin:50px auto;
+    width:80%;
+    max-width:600px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* 📍 LOCATION QR SECTION */
 .location-section {
     margin-top: 40px;
     text-align: center;
@@ -38,4 +121,16 @@
     margin-top: 10px;
     font-size: 14px;
     color: #777;
+}
+
+/* ✨ Fade-in Animation */
+.fade-in{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1.2s ease;
+}
+
+.fade-in.visible{
+    opacity:1;
+    transform:translateY(0);
 }
