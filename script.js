@@ -1,79 +1,18 @@
-// Smooth Scroll
-function scrollToInvite() {
-    document.querySelector(".invitation").scrollIntoView({
-        behavior: "smooth"
-    });
-}
+const enterBtn = document.getElementById("enter-btn");
+const introScreen = document.getElementById("intro-screen");
+const mainContent = document.getElementById("main-content");
+const music = document.getElementById("bg-music");
 
-// Fade In On Scroll
-const faders = document.querySelectorAll('.fade-in');
+enterBtn.addEventListener("click", function() {
 
-const appearOptions = {
-    threshold: 0.3
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries, observer){
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-    });
-}, appearOptions);
-
-faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-});
-
-
-// 🔥 FORCE AUTO MUSIC PLAY
-window.addEventListener("DOMContentLoaded", function () {
-
-    const music = document.getElementById("bg-music");
-
-    if (!music) return;
-
+    // 🎵 Start Music (100% works because user clicked)
     music.volume = 1.0;
-    music.muted = false;
-    music.setAttribute("playsinline", "true");
+    music.play();
 
-    function forcePlay() {
-        let playAttempt = music.play();
+    // ✨ Fade Out Intro
+    introScreen.style.opacity = "0";
+    introScreen.style.visibility = "hidden";
 
-        if (playAttempt !== undefined) {
-            playAttempt.then(() => {
-                console.log("Music autoplay success");
-            }).catch(() => {
-
-                // If blocked → Try muted trick
-                music.muted = true;
-
-                music.play().then(() => {
-                    setTimeout(() => {
-                        music.muted = false;
-                        music.volume = 1.0;
-                    }, 500);
-                }).catch(() => {
-                    console.log("Autoplay blocked completely by browser.");
-                });
-
-            });
-        }
-    }
-
-    // Try multiple times (stronger forcing)
-    forcePlay();
-    setTimeout(forcePlay, 500);
-    setTimeout(forcePlay, 1500);
-    setTimeout(forcePlay, 3000);
+    // 🌸 Show Main Content
+    mainContent.style.opacity = "1";
 });
-
-
-// Toggle Button
-function toggleMusic() {
-    const music = document.getElementById("bg-music");
-    if (music.paused) {
-        music.play();
-    } else {
-        music.pause();
-    }
-}
