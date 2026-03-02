@@ -4,16 +4,19 @@ function scrollToSection() {
     });
 }
 
-window.addEventListener("click", function () {
+window.addEventListener("load", function () {
     const music = document.getElementById("bg-music");
-    music.play();
-}, { once: true });
 
-function toggleMusic() {
+    // Try to play automatically
+    music.play().then(() => {
+        console.log("Music playing");
+    }).catch(() => {
+        console.log("Autoplay blocked");
+    });
+});
+
+// Unmute when user interacts
+document.addEventListener("click", function () {
     const music = document.getElementById("bg-music");
-    if (music.paused) {
-        music.play();
-    } else {
-        music.pause();
-    }
-}
+    music.muted = false;
+});
