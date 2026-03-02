@@ -16,3 +16,44 @@ enterBtn.addEventListener("click", function() {
     // 🌸 Show Main Content
     mainContent.style.opacity = "1";
 });
+/* 📍 LOCATION QR SECTION */
+
+.location-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.location-section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #5a0f1c;
+}
+
+.location-section p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.qr-box {
+    display: inline-block;
+    padding: 15px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.qr-box img {
+    width: 180px;
+    height: 180px;
+}
+
+.qr-box:hover {
+    transform: scale(1.05);
+}
+
+.scan-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
+}
