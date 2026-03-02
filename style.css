@@ -1,147 +1,83 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: 'Playfair Display', serif;
-    background-color: #f8f4ec;
-    color: #5a0f1c;
-    text-align: center;
-    overflow-x: hidden;
+body{
+    font-family:'Playfair Display', serif;
+    background:#f8f4ec;
+    text-align:center;
+    overflow-x:hidden;
 }
 
-/* Music Button */
-.music-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: #5a0f1c;
-    color: white;
-    border: none;
-    padding: 10px 14px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 16px;
-    z-index: 1000;
+/* 🔥 INTRO SCREEN */
+#intro-screen{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    background:linear-gradient(rgba(90,15,28,0.7),rgba(90,15,28,0.7)),
+    url('https://images.unsplash.com/photo-1519741497674-611481863552') center/cover;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    transition:opacity 1.5s ease, visibility 1.5s;
 }
 
-/* HERO */
-.hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(rgba(90,15,28,0.4), rgba(90,15,28,0.4)),
-                url('https://images.unsplash.com/photo-1519741497674-611481863552') no-repeat center/cover;
-    color: white;
+.intro-content h1{
+    font-family:'Great Vibes', cursive;
+    font-size:60px;
+    margin:20px 0;
 }
 
-.hero-content h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 70px;
-    margin: 20px 0;
+.cross{
+    font-size:30px;
 }
 
-.hero span {
-    color: #f8f4ec;
+#enter-btn{
+    margin-top:20px;
+    padding:12px 30px;
+    border:none;
+    background:white;
+    color:#5a0f1c;
+    border-radius:30px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-.cross {
-    font-size: 30px;
-    margin-bottom: 10px;
+#enter-btn:hover{
+    background:#5a0f1c;
+    color:white;
 }
 
-.date-highlight {
-    font-size: 20px;
-    margin-bottom: 20px;
-    font-weight: 600;
+/* 🌸 MAIN CONTENT */
+#main-content{
+    opacity:0;
+    transition:opacity 2s ease;
 }
 
-.view-btn {
-    padding: 12px 28px;
-    background: #5a0f1c;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
-/* INVITATION CARD */
-.invitation {
-    padding: 80px 20px;
+.hero h1{
+    font-family:'Great Vibes', cursive;
+    font-size:60px;
 }
 
-.card {
-    background: white;
-    padding: 50px;
-    max-width: 700px;
-    margin: auto;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.floral-border {
-    border: 4px solid #5a0f1c;
-}
-
-.names {
-    font-family: 'Great Vibes', cursive;
-    font-size: 60px;
-    margin: 20px 0;
-}
-
-/* VERSE */
-.verse-section {
-    padding: 60px 20px;
-}
-
-.verse-box {
-    background: #fff;
-    padding: 40px;
-    border-radius: 12px;
-    max-width: 600px;
-    margin: auto;
-    font-style: italic;
-}
-
-/* LOCATION */
-.location {
-    padding: 60px 20px;
-}
-
-/* FOOTER */
-.footer {
-    background: #5a0f1c;
-    color: white;
-    padding: 40px;
-}
-
-.love {
-    font-family: 'Great Vibes', cursive;
-    font-size: 28px;
-    margin-top: 10px;
-}
-
-/* Fade-in Animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: 1.2s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Mobile Responsive */
-@media(max-width:768px){
-    .hero-content h1 {
-        font-size: 45px;
-    }
-    .names {
-        font-size: 45px;
-    }
+.card{
+    background:white;
+    padding:40px;
+    margin:50px auto;
+    width:80%;
+    max-width:600px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
