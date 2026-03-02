@@ -15,8 +15,4 @@ window.addEventListener("load", function () {
     });
 });
 
-// Unmute when user interacts
-document.addEventListener("click", function () {
-    const music = document.getElementById("bg-music");
-    music.muted = false;
-});
+
