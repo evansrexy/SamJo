@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #f8f4ec;
+    color: #5a0f1c;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(90,15,28,0.4), rgba(90,15,28,0.4)),
+                url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.overlay h1 {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 70px;
+    margin: 20px 0;
+}
+
+.overlay span {
+    color: #f8f4ec;
+}
+
+.overlay h3 {
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+.date {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    background-color: #5a0f1c;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #7a1c2c;
+}
+
+.invitation {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 700px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-top: 6px solid #5a0f1c;
+}
+
+.card h2 {
+    margin-bottom: 20px;
+}
+
+.names {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 60px;
+    margin: 20px 0;
+}
+
+.info {
+    margin: 20px 0;
+    line-height: 1.8;
+}
+
+.verse {
+    margin-top: 30px;
+    font-style: italic;
+    background-color: #f8f4ec;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.verse span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #5a0f1c;
+    color: #fff;
+}
+
+.love {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 28px;
+    margin-top: 10px;
+}
