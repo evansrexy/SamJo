@@ -6,75 +6,41 @@
 <title>Sam & Joanna Wedding</title>
 
 <link rel="stylesheet" href="style.css">
-
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<!-- Background Music -->
-<audio id="bg-music" autoplay loop playsinline preload="auto">
+<!-- 🎵 Background Music -->
+<audio id="bg-music" loop preload="auto">
     <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<button class="music-toggle" onclick="toggleMusic()">🔊</button>
-
-<!-- HERO SECTION -->
-<section class="hero fade-in">
-    <div class="hero-content">
+<!-- 💎 ENTER SCREEN -->
+<div id="intro-screen">
+    <div class="intro-content">
         <div class="cross">✝</div>
-        <h3>By the Grace of God</h3>
-        <h1>Sam <span>&</span> Joanna</h1>
-        <p class="date-highlight">September 26th | Trichy</p>
-        <button class="view-btn" onclick="scrollToInvite()">View Invitation</button>
+        <h1>Sam & Joanna</h1>
+        <p>Are Getting Married</p>
+        <button id="enter-btn">Enter Invitation</button>
     </div>
+</div>
+
+<!-- 🌸 MAIN WEBSITE -->
+<div id="main-content">
+
+<section class="hero fade-in">
+    <h1>Sam <span>&</span> Joanna</h1>
+    <p>September 26th | Trichy</p>
 </section>
 
-<!-- INVITATION SECTION -->
 <section class="invitation fade-in">
-    <div class="card floral-border">
-        <h2>We Are Getting Married</h2>
-        <p>
-            With joyful hearts and God’s blessings,<br>
-            we invite you to celebrate the holy matrimony of
-        </p>
-
-        <h1 class="names">Sam & Joanna</h1>
-
-        <p class="details">
-            📅 <strong>September 26th</strong><br>
-            📍 Trichy<br>
-            ⛪ Christian Wedding Ceremony
-        </p>
+    <div class="card">
+        <h2>We Invite You</h2>
+        <p>Join us to celebrate our holy matrimony.</p>
     </div>
 </section>
 
-<!-- BIBLE VERSE -->
-<section class="verse-section fade-in">
-    <div class="verse-box">
-        <p>
-            "Therefore what God has joined together,<br>
-            let no one separate."
-        </p>
-        <span>— Mark 10:9</span>
-    </div>
-</section>
-
-<!-- LOCATION SECTION -->
-<section class="location fade-in">
-    <h2>Wedding Location</h2>
-    <p>
-        The wedding ceremony will be held in <strong>Trichy</strong>.<br>
-        We request your gracious presence to bless us.
-    </p>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-    <p>We look forward to celebrating with you.</p>
-    <p class="love">With Love, Sam & Joanna</p>
-</footer>
+</div>
 
 <script src="script.js"></script>
 </body>
