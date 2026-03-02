@@ -1,59 +1,83 @@
-const enterBtn = document.getElementById("enter-btn");
-const introScreen = document.getElementById("intro-screen");
-const mainContent = document.getElementById("main-content");
-const music = document.getElementById("bg-music");
+// ===============================
+// 🎵 ENTER SCREEN + MUSIC CONTROL
+// ===============================
 
-enterBtn.addEventListener("click", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
-    // 🎵 Start Music (100% works because user clicked)
-    music.volume = 1.0;
-    music.play();
+    const enterBtn = document.getElementById("enter-btn");
+    const introScreen = document.getElementById("intro-screen");
+    const mainContent = document.getElementById("main-content");
+    const music = document.getElementById("bg-music");
 
-    // ✨ Fade Out Intro
-    introScreen.style.opacity = "0";
-    introScreen.style.visibility = "hidden";
+    // Hide main content initially
+    mainContent.style.opacity = "0";
 
-    // 🌸 Show Main Content
-    mainContent.style.opacity = "1";
+    // When user clicks Join Us
+    enterBtn.addEventListener("click", function () {
+
+        // 🔊 Start music (100% allowed because user clicked)
+        music.volume = 1.0;
+        music.play();
+
+        // ✨ Fade out intro screen
+        introScreen.style.opacity = "0";
+        introScreen.style.visibility = "hidden";
+
+        // 🌸 Show main content smoothly
+        mainContent.style.opacity = "1";
+    });
+
 });
-/* 📍 LOCATION QR SECTION */
 
-.location-section {
-    margin-top: 40px;
-    text-align: center;
+
+// ===============================
+// 🌸 SMOOTH SCROLL FUNCTION
+// ===============================
+
+function scrollToInvite() {
+    const inviteSection = document.querySelector(".invitation");
+    if (inviteSection) {
+        inviteSection.scrollIntoView({
+            behavior: "smooth"
+        });
+    }
 }
 
-.location-section h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #5a0f1c;
-}
 
-.location-section p {
-    margin-bottom: 15px;
-    font-size: 16px;
-}
+// ===============================
+// ✨ FADE-IN ON SCROLL ANIMATION
+// ===============================
 
-.qr-box {
-    display: inline-block;
-    padding: 15px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    transition: 0.3s ease;
-}
+const faders = document.querySelectorAll('.fade-in');
 
-.qr-box img {
-    width: 180px;
-    height: 180px;
-}
+const appearOptions = {
+    threshold: 0.3
+};
 
-.qr-box:hover {
-    transform: scale(1.05);
-}
+const appearOnScroll = new IntersectionObserver(function(entries, observer){
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+    });
+}, appearOptions);
 
-.scan-text {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #777;
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
+
+
+// ===============================
+// 🔊 OPTIONAL: MUSIC TOGGLE (if you add button later)
+// ===============================
+
+function toggleMusic() {
+    const music = document.getElementById("bg-music");
+    if (!music) return;
+
+    if (music.paused) {
+        music.play();
+    } else {
+        music.pause();
+    }
 }
