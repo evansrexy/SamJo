@@ -33,7 +33,7 @@ body{
 }
 
 .cross img {
-    width: 70px;
+    width: 120px;
     animation: glowCross 3s ease-in-out infinite alternate;
 }
 
