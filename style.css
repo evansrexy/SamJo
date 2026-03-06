@@ -1,144 +1,147 @@
 body{
-
 margin:0;
-
 font-family:'Playfair Display',serif;
-
-scroll-behavior:smooth;
-
-color:white;
-
-}
-
-
-/* Slides */
-
-.slide{
-
-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
 text-align:center;
+color:#5b2b2b;
+background:#fff8f6;
+}
 
-background:url("bg.jpg");
+/* HERO */
 
+.hero{
+height:100vh;
+background:url("https://images.unsplash.com/photo-1519741497674-611481863552");
 background-size:cover;
-
 background-position:center;
-
-position:relative;
-
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
 }
 
-
-/* Overlay */
-
-.slide::before{
-
-content:"";
-
-position:absolute;
-
-width:100%;
-
-height:100%;
-
-background:rgba(0,0,0,0.45);
-
+.hero-content{
+background:rgba(0,0,0,0.4);
+padding:60px;
+border-radius:10px;
 }
 
-
-/* Content */
-
-.content{
-
-position:relative;
-
-z-index:2;
-
-max-width:800px;
-
-padding:20px;
-
-}
-
-
-.title{
-
-font-family:'Great Vibes',cursive;
-
+.hero h1{
+font-family:'Great Vibes';
 font-size:80px;
-
+margin:0;
 }
-
-
-.subtitle{
-
-font-size:25px;
-
-margin-top:10px;
-
-}
-
-
-h2{
-
-font-size:40px;
-
-margin-bottom:20px;
-
-}
-
-
-.verse{
-
-font-style:italic;
-
-font-size:28px;
-
-line-height:1.6;
-
-}
-
-
-/* Button */
 
 button{
-
 padding:12px 30px;
-
-border:none;
-
-border-radius:30px;
-
-font-size:18px;
-
 background:maroon;
-
 color:white;
-
+border:none;
+border-radius:25px;
 cursor:pointer;
-
-margin-top:20px;
-
+font-size:18px;
 }
 
+/* Sections */
+
+.section{
+padding:80px 20px;
+}
+
+.light{
+background:#fff1f1;
+}
+
+.section h2{
+font-size:35px;
+color:maroon;
+}
+
+/* Couple */
+
+.couple{
+display:flex;
+justify-content:center;
+gap:60px;
+}
+
+.person{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Countdown */
+
+#countdown{
+font-size:40px;
+margin-top:20px;
+}
+
+/* Verse */
+
+.verse{
+font-style:italic;
+background:#fff3f3;
+}
+
+/* Gallery */
+
+.gallery{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.gallery img{
+width:300px;
+border-radius:10px;
+}
 
 /* Map */
 
 iframe{
-
 width:80%;
-
 height:350px;
-
+border:0;
 border-radius:10px;
+}
 
-border:none;
+/* WhatsApp */
 
+.whatsapp{
+display:inline-block;
+padding:15px 25px;
+background:#25D366;
+color:white;
+border-radius:25px;
+text-decoration:none;
+font-size:18px;
+}
+
+/* Footer */
+
+footer{
+background:maroon;
+color:white;
+padding:40px;
+}
+
+/* Petals */
+
+.petal{
+position:fixed;
+top:-50px;
+width:30px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(0) rotate(0);
+}
+100%{
+transform:translateY(100vh) rotate(360deg);
+}
 }
