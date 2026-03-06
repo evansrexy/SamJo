@@ -28,7 +28,7 @@ for(let i=0;i<20;i++){
 
 let petal=document.createElement("img");
 
-petal.src="https://pngimg.com/uploads/rose_petals/rose_petals_PNG51177.png";
+petal.src="petal.png";
 
 petal.className="petal";
 
