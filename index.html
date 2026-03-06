@@ -16,86 +16,99 @@
 
 <body>
 
+<!-- Rose Petals -->
+
+<div class="petals"></div>
+
 <!-- HERO -->
 
-<section class="slide hero">
+<section class="hero">
 
-<div class="content">
+<div class="hero-content">
 
-<h1 class="title">Sam & Jo</h1>
+<h1>Sam & Jo</h1>
 
-<p class="subtitle">Are Getting Married</p>
+<p>Are Getting Married</p>
 
-<button onclick="playMusic()">Enter</button>
+<button onclick="startInvite()">Enter Invitation</button>
 
 </div>
 
 </section>
 
+
+<!-- COUPLE -->
+
+<section class="section">
+
+<h2>The Couple</h2>
+
+<div class="couple">
+
+<div class="person">
+<h3>Sam</h3>
+<p>The Groom</p>
+</div>
+
+<div class="person">
+<h3>Jo</h3>
+<p>The Bride</p>
+</div>
+
+</div>
+
+</section>
 
 
 <!-- DATE -->
 
-<section class="slide">
-
-<div class="content">
+<section class="section light">
 
 <h2>Save The Date</h2>
 
-<h1>August 22nd 2026</h1>
+<h1 class="date">August 22nd 2026</h1>
 
-</div>
+<div id="countdown"></div>
 
 </section>
 
 
-
 <!-- VERSE -->
 
-<section class="slide">
+<section class="section verse">
 
-<div class="content">
+<p>
 
-<p class="verse">
-
-“Therefore what God has joined together,  
+“Therefore what God has joined together,
 let no one separate.”
 
 </p>
 
 <span>Mark 10:9</span>
 
-</div>
-
 </section>
 
 
+<!-- GALLERY -->
 
-<!-- WEDDING DETAILS -->
+<section class="section">
 
-<section class="slide">
+<h2>Our Moments</h2>
 
-<div class="content">
+<div class="gallery">
 
-<h2>Wedding Ceremony</h2>
-
-<p>Christian Wedding</p>
-
-<p>August 22nd 2026</p>
-
-<p>Trichy, Tamil Nadu</p>
+<img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486">
+<img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc">
+<img src="https://images.unsplash.com/photo-1520857014576-2c4f4c972b57">
 
 </div>
 
 </section>
-
 
 
 <!-- VENUE -->
 
-<section class="slide">
-
-<div class="content">
+<section class="section light">
 
 <h2>Wedding Venue</h2>
 
@@ -103,26 +116,34 @@ let no one separate.”
 src="https://maps.google.com/maps?q=trichy&t=&z=13&ie=UTF8&iwloc=&output=embed">
 </iframe>
 
-</div>
-
 </section>
 
+
+<!-- RSVP -->
+
+<section class="section">
+
+<h2>RSVP</h2>
+
+<a class="whatsapp"
+href="https://wa.me/?text=I will attend Sam & Jo Wedding on August 22 2026">
+
+Send RSVP via WhatsApp
+
+</a>
+
+</section>
 
 
 <!-- FOOTER -->
 
-<section class="slide">
+<footer>
 
-<div class="content">
-
-<h1>Sam & Jo</h1>
+<h2>Sam & Jo</h2>
 
 <p>We look forward to celebrating with you</p>
 
-</div>
-
-</section>
-
+</footer>
 
 
 <audio id="music" loop>
@@ -131,7 +152,9 @@ src="https://maps.google.com/maps?q=trichy&t=&z=13&ie=UTF8&iwloc=&output=embed">
 
 </audio>
 
+
 <script src="script.js"></script>
 
 </body>
+
 </html>
