@@ -2,104 +2,64 @@ body{
 margin:0;
 font-family:'Playfair Display',serif;
 text-align:center;
-color:#5b2b2b;
-background:#fff8f6;
+background:#fff7f7;
+color:#5a2a2a;
 }
-
-/* HERO */
 
 .hero{
 height:100vh;
 background:url("https://images.unsplash.com/photo-1519741497674-611481863552");
 background-size:cover;
-background-position:center;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
 color:white;
 }
 
-.hero-content{
-background:rgba(0,0,0,0.4);
-padding:60px;
-border-radius:10px;
-}
-
 .hero h1{
 font-family:'Great Vibes';
 font-size:80px;
-margin:0;
 }
 
 button{
-padding:12px 30px;
+padding:12px 25px;
 background:maroon;
 color:white;
 border:none;
 border-radius:25px;
 cursor:pointer;
-font-size:18px;
 }
-
-/* Sections */
 
 .section{
 padding:80px 20px;
 }
 
 .light{
-background:#fff1f1;
+background:#fff0f0;
 }
-
-.section h2{
-font-size:35px;
-color:maroon;
-}
-
-/* Couple */
 
 .couple{
 display:flex;
 justify-content:center;
-gap:60px;
+gap:40px;
 }
 
-.person{
+.card{
 background:white;
 padding:30px;
 border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
 }
-
-/* Countdown */
 
 #countdown{
 font-size:40px;
-margin-top:20px;
+color:maroon;
 }
-
-/* Verse */
 
 .verse{
 font-style:italic;
-background:#fff3f3;
 }
-
-/* Gallery */
-
-.gallery{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.gallery img{
-width:300px;
-border-radius:10px;
-}
-
-/* Map */
 
 iframe{
 width:80%;
@@ -108,19 +68,13 @@ border:0;
 border-radius:10px;
 }
 
-/* WhatsApp */
-
 .whatsapp{
-display:inline-block;
-padding:15px 25px;
 background:#25D366;
 color:white;
+padding:15px 25px;
 border-radius:25px;
 text-decoration:none;
-font-size:18px;
 }
-
-/* Footer */
 
 footer{
 background:maroon;
@@ -128,20 +82,35 @@ color:white;
 padding:40px;
 }
 
-/* Petals */
+/* petals */
 
 .petal{
 position:fixed;
-top:-50px;
+top:-40px;
 width:30px;
 animation:fall linear infinite;
 }
 
 @keyframes fall{
-0%{
-transform:translateY(0) rotate(0);
+
+0%{transform:translateY(0)}
+
+100%{transform:translateY(100vh)}
+
 }
-100%{
-transform:translateY(100vh) rotate(360deg);
+
+/* scratch */
+
+#scratch{
+width:300px;
+height:100px;
+background:silver;
+margin:auto;
 }
+
+.hidden-date{
+position:absolute;
+left:0;
+right:0;
+margin-top:-80px;
 }
