@@ -1,96 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Sam Weds Jo</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<!-- Intro Screen -->
+<!-- HERO -->
 
-<section class="intro">
-<div class="cross">✝</div>
+<section class="slide hero">
 
-<h1>Sam Weds Jo</h1>
+<div class="content">
 
-<p>By the Grace of God we invite you to celebrate our wedding</p>
+<h1 class="title">Sam & Jo</h1>
 
-<button onclick="enterInvite()">Enter Invitation</button>
-</section>
+<p class="subtitle">Are Getting Married</p>
 
-
-<!-- Main Invitation -->
-
-<div id="invite">
-
-<!-- Couple Section -->
-
-<section class="section">
-<h2>Meet the Couple</h2>
-
-<div class="couple">
-
-<div class="card">
-<h3>Sam</h3>
-<p>The Groom</p>
-</div>
-
-<div class="card">
-<h3>Jo</h3>
-<p>The Bride</p>
-</div>
+<button onclick="playMusic()">Enter</button>
 
 </div>
-</section>
-
-
-<!-- Wedding Details -->
-
-<section class="section">
-<h2>Wedding Ceremony</h2>
-
-<p><strong>Date:</strong> August 22nd 2026</p>
-
-<p><strong>Theme:</strong> Christian Wedding</p>
-
-<p><strong>Location:</strong> Trichy, Tamil Nadu</p>
 
 </section>
 
 
-<!-- Countdown -->
 
-<section class="section">
+<!-- DATE -->
 
-<h2>Wedding Countdown</h2>
+<section class="slide">
 
-<div id="countdown"></div>
+<div class="content">
+
+<h2>Save The Date</h2>
+
+<h1>August 22nd 2026</h1>
+
+</div>
 
 </section>
 
 
-<!-- Bible Verse -->
 
-<section class="section verse">
+<!-- VERSE -->
 
-<p>
-“Therefore what God has joined together, let no one separate.”
+<section class="slide">
+
+<div class="content">
+
+<p class="verse">
+
+“Therefore what God has joined together,  
+let no one separate.”
+
 </p>
 
 <span>Mark 10:9</span>
 
+</div>
+
 </section>
 
 
-<!-- Map -->
 
-<section class="section">
+<!-- WEDDING DETAILS -->
+
+<section class="slide">
+
+<div class="content">
+
+<h2>Wedding Ceremony</h2>
+
+<p>Christian Wedding</p>
+
+<p>August 22nd 2026</p>
+
+<p>Trichy, Tamil Nadu</p>
+
+</div>
+
+</section>
+
+
+
+<!-- VENUE -->
+
+<section class="slide">
+
+<div class="content">
 
 <h2>Wedding Venue</h2>
 
@@ -98,58 +103,33 @@
 src="https://maps.google.com/maps?q=trichy&t=&z=13&ie=UTF8&iwloc=&output=embed">
 </iframe>
 
-</section>
-
-
-<!-- RSVP -->
-
-<section class="section">
-
-<h2>RSVP</h2>
-
-<form>
-
-<input type="text" placeholder="Your Name">
-
-<input type="number" placeholder="Guests">
-
-<textarea placeholder="Message"></textarea>
-
-<button type="submit">Send RSVP</button>
-
-</form>
+</div>
 
 </section>
 
 
-<!-- Footer -->
 
-<footer>
+<!-- FOOTER -->
 
-<h3>Sam & Jo</h3>
+<section class="slide">
 
-<p>August 22nd 2026</p>
+<div class="content">
 
-<p>Thank you for celebrating with us</p>
+<h1>Sam & Jo</h1>
 
-</footer>
+<p>We look forward to celebrating with you</p>
 
 </div>
 
+</section>
 
-<!-- Background Music -->
+
 
 <audio id="music" loop>
 
 <source src="music.mp3" type="audio/mp3">
 
 </audio>
-
-
-<!-- Music Button -->
-
-<button id="musicBtn">🎵</button>
-
 
 <script src="script.js"></script>
 
