@@ -1,44 +1,59 @@
-document.addEventListener("DOMContentLoaded", function () {
+// Enter Invite
 
-    const enterBtn = document.getElementById("enter-btn");
-    const introScreen = document.getElementById("intro-screen");
-    const mainContent = document.getElementById("main-content");
-    const music = document.getElementById("bg-music");
+function enterInvite(){
 
-    mainContent.style.opacity = "0";
+document.querySelector(".intro").style.display="none";
 
-    enterBtn.addEventListener("click", function () {
+document.getElementById("invite").style.display="block";
 
-        // 🎵 Start Music
-        music.volume = 1.0;
-        music.play();
-
-        // Fade out intro
-        introScreen.style.opacity = "0";
-        introScreen.style.visibility = "hidden";
-
-        // Show main content
-        mainContent.style.opacity = "1";
-    });
-
-});
+}
 
 
-// Fade In On Scroll
-const faders = document.querySelectorAll('.fade-in');
+// Countdown
 
-const appearOptions = {
-    threshold: 0.3
-};
+const weddingDate = new Date("Aug 22, 2026 00:00:00").getTime();
 
-const appearOnScroll = new IntersectionObserver(function(entries, observer){
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-    });
-}, appearOptions);
+const timer = setInterval(function(){
 
-faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-});
+const now = new Date().getTime();
+
+const distance = weddingDate - now;
+
+const days = Math.floor(distance/(1000*60*60*24));
+
+document.getElementById("countdown").innerHTML = days + " Days Remaining";
+
+},1000);
+
+
+// Music
+
+const music = document.getElementById("music");
+
+const btn = document.getElementById("musicBtn");
+
+let playing=false;
+
+btn.onclick=function(){
+
+if(!playing){
+
+music.play();
+
+btn.innerHTML="🔊";
+
+playing=true;
+
+}
+
+else{
+
+music.pause();
+
+btn.innerHTML="🎵";
+
+playing=false;
+
+}
+
+}
