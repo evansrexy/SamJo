@@ -1,59 +1,41 @@
-// Enter Invite
+function playMusic(){
 
-function enterInvite(){
-
-document.querySelector(".intro").style.display="none";
-
-document.getElementById("invite").style.display="block";
-
-}
-
-
-// Countdown
-
-const weddingDate = new Date("Aug 22, 2026 00:00:00").getTime();
-
-const timer = setInterval(function(){
-
-const now = new Date().getTime();
-
-const distance = weddingDate - now;
-
-const days = Math.floor(distance/(1000*60*60*24));
-
-document.getElementById("countdown").innerHTML = days + " Days Remaining";
-
-},1000);
-
-
-// Music
-
-const music = document.getElementById("music");
-
-const btn = document.getElementById("musicBtn");
-
-let playing=false;
-
-btn.onclick=function(){
-
-if(!playing){
+const music=document.getElementById("music");
 
 music.play();
 
-btn.innerHTML="🔊";
+}
 
-playing=true;
+
+
+// Fade animation
+
+const slides=document.querySelectorAll(".slide");
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity=1;
+
+entry.target.style.transform="translateY(0)";
 
 }
 
-else{
+});
 
-music.pause();
+});
 
-btn.innerHTML="🎵";
+slides.forEach(slide=>{
 
-playing=false;
+slide.style.opacity=0;
 
-}
+slide.style.transform="translateY(40px)";
 
-}
+slide.style.transition="1s";
+
+observer.observe(slide);
+
+});
