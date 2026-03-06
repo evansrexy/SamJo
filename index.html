@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Sam ♥ Jo</title>
+<title>Sam Weds Jo</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -16,26 +16,45 @@
 
 <body>
 
-<!-- Rose Petals -->
-
 <div class="petals"></div>
 
 <!-- HERO -->
 
 <section class="hero">
 
-<div class="hero-content">
-
-<h1>Sam ♥ Jo</h1>
+<h1>Sam & Jo</h1>
 
 <p>Are Getting Married</p>
 
-<button onclick="startInvite()">Join us on our Big Day!</button>
+<button onclick="startMusic()">Enter Invitation</button>
+
+</section>
+
+<!-- SAVE THE DATE SCRATCH -->
+
+<section class="section">
+
+<h2>Save The Date</h2>
+
+<canvas id="scratch"></canvas>
+
+<div class="hidden-date">
+
+<h1>August 22nd 2026</h1>
 
 </div>
 
 </section>
 
+<!-- COUNTDOWN -->
+
+<section class="section light">
+
+<h2>Wedding Countdown</h2>
+
+<div id="countdown"></div>
+
+</section>
 
 <!-- COUPLE -->
 
@@ -45,33 +64,37 @@
 
 <div class="couple">
 
-<div class="person">
-<h3>Evansley Samuel</h3>
+<div class="card">
+
+<h3>Sam</h3>
+
 <p>The Groom</p>
+
 </div>
 
-<div class="person">
-<h3>Joanna Priyanka George</h3>
+<div class="card">
+
+<h3>Jo</h3>
+
 <p>The Bride</p>
+
 </div>
 
 </div>
 
 </section>
 
-
-<!-- DATE -->
+<!-- LIKE BUTTON -->
 
 <section class="section light">
 
-<h2>Save The Date</h2>
+<h2>Send Your Love</h2>
 
-<h1 class="date">August 22nd 2026</h1>
+<button id="likeBtn">❤️ Like</button>
 
-<div id="countdown"></div>
+<p id="likeCount">0 Hearts</p>
 
 </section>
-
 
 <!-- VERSE -->
 
@@ -79,8 +102,8 @@
 
 <p>
 
-“Therefore what God has joined together,
-let no one separate.”
+“Therefore what God has joined together  
+let no one separate”
 
 </p>
 
@@ -88,27 +111,9 @@ let no one separate.”
 
 </section>
 
-
-<!-- GALLERY -->
-
-<section class="section">
-
-<h2>Our Moments</h2>
-
-<div class="gallery">
-
-<img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486">
-<img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc">
-<img src="https://images.unsplash.com/photo-1520857014576-2c4f4c972b57">
-
-</div>
-
-</section>
-
-
 <!-- VENUE -->
 
-<section class="section light">
+<section class="section">
 
 <h2>Wedding Venue</h2>
 
@@ -118,15 +123,14 @@ src="https://maps.google.com/maps?q=trichy&t=&z=13&ie=UTF8&iwloc=&output=embed">
 
 </section>
 
-
 <!-- RSVP -->
 
-<section class="section">
+<section class="section light">
 
 <h2>RSVP</h2>
 
 <a class="whatsapp"
-href="https://wa.me/?text=I will attend Sam & Jo Wedding on August 22 2026">
+href="https://wa.me/?text=I will attend Sam & Jo wedding on Aug 22 2026">
 
 Send RSVP via WhatsApp
 
@@ -134,27 +138,21 @@ Send RSVP via WhatsApp
 
 </section>
 
-
-<!-- FOOTER -->
-
 <footer>
 
 <h2>Sam & Jo</h2>
 
-<p>We look forward to celebrating with you</p>
+<p>Thank you for celebrating with us</p>
 
 </footer>
 
-
 <audio id="music" loop>
 
-<source src="music.mp3" type="audio/mp3">
+<source src="music.mp3">
 
 </audio>
-
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
