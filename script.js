@@ -1,41 +1,41 @@
-function playMusic(){
+function startInvite(){
 
-const music=document.getElementById("music");
-
-music.play();
+document.getElementById("music").play();
 
 }
 
 
+// Countdown
 
-// Fade animation
+const weddingDate = new Date("Aug 22, 2026").getTime();
 
-const slides=document.querySelectorAll(".slide");
+setInterval(function(){
 
-const observer=new IntersectionObserver(entries=>{
+let now = new Date().getTime();
 
-entries.forEach(entry=>{
+let distance = weddingDate - now;
 
-if(entry.isIntersecting){
+let days = Math.floor(distance/(1000*60*60*24));
 
-entry.target.style.opacity=1;
+document.getElementById("countdown").innerHTML = days+" Days Remaining";
 
-entry.target.style.transform="translateY(0)";
+},1000);
+
+
+// Falling Petals
+
+for(let i=0;i<20;i++){
+
+let petal=document.createElement("img");
+
+petal.src="https://pngimg.com/uploads/rose_petals/rose_petals_PNG51177.png";
+
+petal.className="petal";
+
+petal.style.left=Math.random()*100+"%";
+
+petal.style.animationDuration=(5+Math.random()*5)+"s";
+
+document.body.appendChild(petal);
 
 }
-
-});
-
-});
-
-slides.forEach(slide=>{
-
-slide.style.opacity=0;
-
-slide.style.transform="translateY(40px)";
-
-slide.style.transition="1s";
-
-observer.observe(slide);
-
-});
